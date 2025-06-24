@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería visual de Por Amor - Imágenes, arte conceptual y momentos épicos de la serie">
+    <meta name="keywords" content="galería por amor, imágenes serie, arte conceptual, fan art">
+    <meta name="author" content="Por Amor Series">
+    <meta property="og:title" content="Galería de Por Amor - Imágenes y Arte">
+    <meta property="og:description" content="Explora la galería visual completa del universo de Por Amor">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Galería | Por Amor - Serie Fantástica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 1024 1024" class="logo-svg">
+                    <path d="M512.61 766.47c-191.73 0-382.35 23.79-446.14-114.4-21.3-46.15 156.87 53.84 302.12 65.37C269.82 673.22 142.26 612.89 111 502.09 97.46 454 325 655.19 382.14 669.37c-42.61-38.46-223.06-198.32-168.49-294.18 25.18-44.22 184 242.27 184 242.27s-134.75-248.84-58.1-324.95c31-30.76 67.78 276.88 141.38 344.17 0 0-35.83-382.63 30-380.71s51.32 244.19 32 384.55C630 519.4 645.53 315.59 672.64 288.67s69.72 153.82-63.91 332.64c77.47-13.46 197.54-299.95 203.35-251.88 19 155.67-86.61 229.3-86.61 229.3s175.74-67.84 186.11 19.23c6.47 54.31-207.88 177-207.88 177s236.58 74.27 179.29 147.78-172.37-98.59-172.37-98.59 32.38 249.22-98.71 193.42c-65.54-27.88 16.53-198.34 16.53-198.34s-154.71 242.63-228.73 153.37c-37.85-45.67 115.88-204.16 115.88-204.16z" fill="url(#logoGradient)"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ae4db"/>
+                            <stop offset="100%" style="stop-color:#667eea"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Por Amor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                <li><a href="personajes.html" class="nav-link">👥 Personajes</a></li>
+                <li><a href="universo.html" class="nav-link">🌟 Universo</a></li>
+                <li><a href="galeria.html" class="nav-link active">🖼️ Galería</a></li>
+                <li><a href="tienda.html" class="nav-link">🛒 Tienda</a></li>
+                <li><a href="comentarios.html" class="nav-link">💬 Comunidad</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de partículas -->
+    <div class="particles-bg"></div>
+
+    <!-- Header de galería -->
+    <header class="gallery-hero">
+        <div class="container">
+            <h1 class="page-title">Galería Visual</h1>
+            <p class="page-subtitle">Explora el universo visual de Por Amor a través de imágenes</p>
+        </div>
+    </header>
+
+    <!-- Filtros de galería -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-buttons" id="gallery-filters">
+                    <button class="filter-btn active" data-category="all">Todas</button>
+                    <button class="filter-btn" data-category="characters">Personajes</button>
+                    <button class="filter-btn" data-category="landscapes">Paisajes</button>
+                    <button class="filter-btn" data-category="concepts">Arte Conceptual</button>
+                    <button class="filter-btn" data-category="fan-art">Fan Art</button>
+                </div>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid" title="Vista de cuadrícula">⊞</button>
+                    <button class="view-btn" data-view="masonry" title="Vista de mosaico">⊟</button>
+                    <button class="view-btn" data-view="slideshow" title="Presentación">▶</button>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="gallery-search" placeholder="Buscar en la galería..." class="search-input">
+                <button class="search-btn" id="gallery-search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería principal -->
+    <main class="gallery-main">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Las imágenes se cargarán dinámicamente -->
+            </div>
+            
+            <!-- Contador de imágenes -->
+            <div class="gallery-stats" id="gallery-stats">
+                <span id="images-count">0 imágenes</span>
+                <span id="current-filter">Mostrando: Todas</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de imagen -->
+    <div class="image-modal" id="image-modal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <button class="modal-prev" id="modal-prev">‹</button>
+            <button class="modal-next" id="modal-next">›</button>
+            <div class="modal-image-container">
+                <img id="" src="" alt="" class="modal-image">
+                <div class="image-loader" id="image-loader">Cargando...</div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-title">Título de la imagen</h3>
+                <p id="modal-description">Descripción de la imagen</p>
+                <div class="image-metadata">
+                    <span id="modal-category">Categoría</span>
+                    <span id="modal-date">Fecha</span>
+                </div>
+                <div class="image-actions">
+                    <button class="action-btn" id="download-btn" title="Descargar imagen">⬇</button>
+                    <button class="action-btn" id="share-btn" title="Compartir">📤</button>
+                    <button class="action-btn" id="favorite-btn" title="Agregar a favoritos">♡</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-modal" id="slideshow-modal">
+        <div class="slideshow-controls">
+            <button class="slideshow-btn" id="slideshow-close">✕</button>
+            <button class="slideshow-btn" id="slideshow-play">▶</button>
+            <button class="slideshow-btn" id="slideshow-pause" style="display: none;">⏸</button>
+        </div>
+        <div class="slideshow-container">
+            <img id="slideshow-image" src="" alt="" class="slideshow-image">
+            <div class="slideshow-info">
+                <h3 id="slideshow-title">Título</h3>
+                <p id="slideshow-counter">1 / 10</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Por Amor</h4>
+                    <p>Una serie que celebra la diversidad y el poder del amor verdadero.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="universo.html">Universo</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="comentarios.html">Comentarios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: bmmj040@poramor.com</p>
+                    <p>© 2025 Por Amor. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

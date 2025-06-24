@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a todos los personajes de Por Amor - Sus historias, poderes sobrenaturales y maldiciones únicas">
+    <meta name="keywords" content="personajes por amor, dahlia coldwell, elaine namikaze, liam evans, poderes sobrenaturales">
+    <meta name="author" content="Por Amor Series">
+    <meta property="og:title" content="Personajes de Por Amor - Galería Completa">
+    <meta property="og:description" content="Descubre las historias y poderes de cada personaje en el universo de Por Amor">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Personajes | Por Amor - Serie Fantástica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="personajes.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 1024 1024" class="logo-svg">
+                    <path d="M512.61 766.47c-191.73 0-382.35 23.79-446.14-114.4-21.3-46.15 156.87 53.84 302.12 65.37C269.82 673.22 142.26 612.89 111 502.09 97.46 454 325 655.19 382.14 669.37c-42.61-38.46-223.06-198.32-168.49-294.18 25.18-44.22 184 242.27 184 242.27s-134.75-248.84-58.1-324.95c31-30.76 67.78 276.88 141.38 344.17 0 0-35.83-382.63 30-380.71s51.32 244.19 32 384.55C630 519.4 645.53 315.59 672.64 288.67s69.72 153.82-63.91 332.64c77.47-13.46 197.54-299.95 203.35-251.88 19 155.67-86.61 229.3-86.61 229.3s175.74-67.84 186.11 19.23c6.47 54.31-207.88 177-207.88 177s236.58 74.27 179.29 147.78-172.37-98.59-172.37-98.59 32.38 249.22-98.71 193.42c-65.54-27.88 16.53-198.34 16.53-198.34s-154.71 242.63-228.73 153.37c-37.85-45.67 115.88-204.16 115.88-204.16z" fill="url(#logoGradient)"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ae4db"/>
+                            <stop offset="100%" style="stop-color:#667eea"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Por Amor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                <li><a href="personajes.html" class="nav-link active">👥 Personajes</a></li>
+                <li><a href="universo.html" class="nav-link">🌟 Universo</a></li>
+                <li><a href="galeria.html" class="nav-link">🖼️ Galería</a></li>
+                <li><a href="tienda.html" class="nav-link">🛒 Tienda</a></li>
+                <li><a href="comentarios.html" class="nav-link">💬 Comunidad</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de partículas -->
+    <div class="particles-bg"></div>
+
+    <!-- Header de personajes -->
+    <header class="characters-hero">
+        <div class="container">
+            <h1 class="page-title">Personajes de Por Amor</h1>
+            <p class="page-subtitle">Conoce a los protagonistas de esta épica historia de amor sobrenatural</p>
+        </div>
+    </header>
+
+    <!-- Filtros de personajes -->
+    <section class="character-filters">
+        <div class="container">
+            <div class="filter-buttons" id="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="angel">🪶 Ángeles</button>
+                <button class="filter-btn" data-filter="demonio">🔥 Demonios</button>
+                <button class="filter-btn" data-filter="vampiro">🩸 Vampiros</button>
+                <button class="filter-btn" data-filter="lobo">🐺 Licántropos</button>
+                <button class="filter-btn" data-filter="hibrido">⚡ Híbridos</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="character-search" placeholder="Buscar personaje..." class="search-input">
+                <button class="search-btn" id="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de personajes -->
+    <main class="characters-gallery">
+        <div class="container">
+            <div class="characters-container" id="characters-container">
+                <!-- Los personajes se cargarán dinámicamente -->
+            </div>
+            
+            <!-- Paginación -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn" id="prev-page" disabled>← Anterior</button>
+                <div class="page-numbers" id="page-numbers"></div>
+                <button class="page-btn" id="next-page">Siguiente →</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de personaje -->
+    <div class="character-modal" id="character-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenido del modal se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Por Amor</h4>
+                    <p>Una serie que celebra la diversidad y el poder del amor verdadero.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="universo.html">Universo</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="comentarios.html">Comentarios</a></li>
+                        <li><a href="#" id="newsletter-link">Newsletter</a></li>
+                        <li><a href="#" id="fan-art-link">Fan Art</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: info@poramor.com</p>
+                    <p>© 2025 Por Amor. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script>
+        // Datos de personajes
+        const charactersData = [
+            {
+                id: 1,
+                name: "Dahlia Coldwell Cythe",
+                species: "hibrido",
+                age: 17,
+                code: "51YP96S6B",
+                avatar: "DC",
+                description: "Quien tuvo que madurar a una edad temprana, creyendo que su madre las abandonó tras una discusión con su padre, tiene que cuidar sola a su hermana menor Arya, pues descubre que este, engañó a su mamá con otra mujer, pensando que tal vez esa fue la razón de su abandono, ella, no recuerda que presenció la muerte de su madre a manos de su progenitor.",
+                powers: [
+                    { name: "Desveum", description: "Puede interferir en la magia enemiga, causando fallos o efectos aleatorios" },
+                    { name: "Nexovita", description: "Puede almacenar energías y esencias en amuletos y compartirlas" }
+                ],
+                curse: "Mientras más amuletos comparta, su cuerpo será más débil, además, si el amuleto que da se llega a romper, este podrá herir a quien lo porta y a ella",
+                parents: "Mamá: Hada, Papá: Humano",
+                image: "img/dahlia.jpg"
+            },
+            {
+                id: 2,
+                name: "Elaine Namikaze Mirae",
+                species: "angel",
+                age: 15,
+                code: "",
+                avatar: "EN",
+                description: "Pierde a sus padres a causa de su existencia, quedando huérfana al año de nacer, siendo criada prácticamente por su tía, quien la trata bien a pesar de que no la conoce, así mismo, se hace amiga de su prima, a quien quiere como una hermana, ayudándola a superar su pasado y protegiéndola de los malos tratos de su tía.",
+                powers: [
+                    { name: "Mnemosínea", description: "Puede tomar poderes prestados de antiguos portadores" },
+                    { name: "Necrospect", description: "Puede sentir presencias de enemigos y absorber su energía para su beneficio" }
+                ],
+                curse: "Presentará ciclos de olvido durante minutos donde no podrá distinguir la realidad",
+                parents: "Mamá: Ángel, Papá: Ángel / Demonio",
+                image: "img/elaine.jpg"
+            },
+            {
+                id: 3,
+                name: "Evelyn Daurella Mouton",
+                species: "hibrido",
+                age: 17,
+                code: "S8STXHJ3L",
+                avatar: "ED",
+                description: "Viene de buena familia, una chica sencilla pero astuta, tenía una amiga que quería mucho, pero a los 10 años fue testigo de su muerte a manos de un raza pura, lo que la hace tener resentimiento hacia esta parte de la población, excepto uno, de quien se vuelve amiga luego de ser salvada por él.",
+                powers: [
+                    { name: "Aegis", description: "Puede crear un campo de fuerza que protege a quienes estén dentro" },
+                    { name: "Fae", description: "Puede cambiar de forma y copiar sus acciones" }
+                ],
+                curse: "Empezará a ver ilusiones donde no las hay lo cual hará que sus emociones sean inestables",
+                parents: "Mamá: Vampiro, Papá: Lobo",
+                image: "img/evelyn.jpg"
+            },
+            {
+                id: 4,
+                name: "Cielo Sounssera Mirae",
+                species: "angel",
+                age: 17,
+                code: "RRV7CIENO",
+                avatar: "CS",
+                description: "Teniendo un trauma de pequeña al experimentar el descubrimiento de uno de sus poderes a temprana edad, acompañada de la muerte de su padre, olvida que es de especie ángel y con ello, el poder que la traumó, haciéndola vivir como alguien de raza pura.",
+                powers: [
+                    { name: "Obeyme", description: "Puede hacer que cualquier persona la obedezca solo con hablarle" },
+                    { name: "Emotum", description: "Puede leer los pensamientos de los demás" }
+                ],
+                curse: "Su poder curativo se vuelve contra ella cuando está emocionalmente inestable",
+                parents: "Mamá: Humana, Papá: Ángel Yurellim",
+                image: "img/cielo.jpg"
+            },
+            {
+                id: 5,
+                name: "Liam Evans Solace",
+                species: "hibrido",
+                age: 18,
+                code: "NEVT8LIAM",
+                avatar: "LE",
+                description: "Como hijo mayor nacido de un matrimonio arreglado, es algo reservado y su vez alguien con un gran sentido de responsabilidad pues carga con las expectativas de su linaje, a pesar de esto, siempre está velando por el bienestar de su hermano menor a quien protege de los maltratos de sus padres.",
+                powers: [
+                    { name: "Hemomancia", description: "Manipulación de la sangre para curación y combate" },
+                    { name: "Velocitas", description: "Velocidad sobrehumana y reflejos mejorados" }
+                ],
+                curse: "Agotamiento dependiendo de cuánto use sus poderes, para recuperarse tiene que consumir la vitalidad de algo más",
+                parents: "Mamá: Demonio, Papá: Vampiro",
+                image: "img/liam.jpg"
+            },
+            {
+                id: 6,
+                name: "Kyle Naeil Milton",
+                species: "hibrido",
+                age: 14,
+                code: "Kyl1234",
+                avatar: "KN",
+                description: "Nació en una familia problemática la cual lastimaba a otros para vivir; pensando que esto era normal, actuó igual a ellos; sin embargo, un día conoció a un chico que le hizo dudar de sus acciones, lo que lo llevó a terminar lastimándolo, a consecuencia, obtuvo un poder que iba en contra de todo lo que creía, teniendo que aprender sobre justicia de la peor manera.",
+                powers: [
+                    { name: "Karma", description: "Puede saber los pecados de alguien y con eso castigarlo" },
+                    { name: "Morphia", description: "Puede cambiar de cuerpo" }
+                ],
+                curse: "Su poder también aplica para él, además, si no cumple con el castigo de alguien, el destino se encarga de esta persona.",
+                parents: "Mamá: Demonio, Papá: Vampiro",
+                image: "img/kyle.jpg"
+            }
+        ];
+
+        // Inicializar página de personajes
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCharactersPage();
+        });
+
+        function initializeCharactersPage() {
+            const itemsPerPage = 3;
+            let currentPage = 1;
+            let filteredCharacters = [...charactersData];
+
+            // Renderizar personajes
+            function renderCharacters(characters, page = 1) {
+                const container = document.getElementById('characters-container');
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const charactersToShow = characters.slice(startIndex, endIndex);
+
+                container.innerHTML = '';
+
+                charactersToShow.forEach(character => {
+                    const characterCard = createCharacterCard(character);
+                    container.appendChild(characterCard);
+                });
+
+                updatePagination(characters.length, page);
+            }
+
+            // Crear tarjeta de personaje
+            function createCharacterCard(character) {
+                const card = document.createElement('article');
+                card.className = 'character-card detailed';
+                card.setAttribute('data-species', character.species);
+                
+                card.innerHTML = `
+                    <div class="character-header">
+                        <div class="character-avatar">${character.avatar}</div>
+                        <div class="character-info">
+                            <h2>${character.name}</h2>
+                            <span class="character-species">${getSpeciesName(character.species)}</span>
+                            <span class="character-age">${character.age} años</span>
+                            ${character.code ? `<span class="character-code">${character.code}</span>` : ''}
+                        </div>
+                    </div>
+                    
+                    <figure class="character-image">
+                        <img src="${character.image}" alt="${character.name}" class="character-portrait" loading="lazy">
+                        <figcaption>${character.name}</figcaption>
+                    </figure>
+
+                    <div class="character-description">
+                        <p>${character.description}</p>
+                    </div>
+
+                    <div class="character-powers">
+                        <h3>Poderes</h3>
+                        <div class="power-list">
+                            ${character.powers.map(power => `
+                                <div class="power-item">
+                                    <span class="power-name">"${power.name}"</span>
+                                    <span class="power-desc">${power.description}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="character-curse">
+                        <h3>Maldición</h3>
+                        <p>${character.curse}</p>
+                    </div>
+
+                    <div class="character-parents">
+                        <strong>Familia:</strong> ${character.parents}
+                    </div>
+
+                    <button class="character-details-btn" data-character-id="${character.id}">
+                        Ver Detalles Completos
+                    </button>
+                `;
+
+                return card;
+            }
+
+            // Filtros
+            document.getElementById('filter-buttons').addEventListener('click', function(e) {
+                if (e.target.classList.contains('filter-btn')) {
+                    // Actualizar botón activo
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+
+                    // Filtrar personajes
+                    const filter = e.target.getAttribute('data-filter');
+                    if (filter === 'all') {
+                        filteredCharacters = [...charactersData];
+                    } else {
+                        filteredCharacters = charactersData.filter(char => char.species === filter);
+                    }
+
+                    currentPage = 1;
+                    renderCharacters(filteredCharacters, currentPage);
+                }
+            });
+
+            // Búsqueda
+            const searchInput = document.getElementById('character-search');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                filteredCharacters = charactersData.filter(char => 
+                    char.name.toLowerCase().includes(searchTerm) ||
+                    char.description.toLowerCase().includes(searchTerm)
+                );
+                currentPage = 1;
+                renderCharacters(filteredCharacters, currentPage);
+            });
+
+            // Paginación
+            function updatePagination(totalItems, currentPageNum) {
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+                const pageNumbers = document.getElementById('page-numbers');
+                const prevBtn = document.getElementById('prev-page');
+                const nextBtn = document.getElementById('next-page');
+
+                pageNumbers.innerHTML = '';
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.className = `page-btn ${i === currentPageNum ? 'active' : ''}`;
+                    pageBtn.textContent = i;
+                    pageBtn.addEventListener('click', () => {
+                        currentPage = i;
+                        renderCharacters(filteredCharacters, currentPage);
+                    });
+                    pageNumbers.appendChild(pageBtn);
+                }
+
+                prevBtn.disabled = currentPageNum === 1;
+                nextBtn.disabled = currentPageNum === totalPages;
+
+                prevBtn.onclick = () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderCharacters(filteredCharacters, currentPage);
+                    }
+                };
+
+                nextBtn.onclick = () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderCharacters(filteredCharacters, currentPage);
+                    }
+                };
+            }
+
+            // Función helper para nombres de especies
+            function getSpeciesName(species) {
+                const names = {
+                    'angel': 'Ángel',
+                    'demonio': 'Demonio',
+                    'vampiro': 'Vampiro',
+                    'lobo': 'Licántropo',
+                    'hibrido': 'Híbrido'
+                };
+                return names[species] || species;
+            }
+
+            // Modal de personaje
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('character-details-btn')) {
+                    const characterId = parseInt(e.target.getAttribute('data-character-id'));
+                    showCharacterModal(characterId);
+                }
+            });
+
+            function showCharacterModal(characterId) {
+                const character = charactersData.find(char => char.id === characterId);
+                if (!character) return;
+
+                const modal = document.getElementById('character-modal');
+                const modalBody = document.getElementById('modal-body');
+
+                modalBody.innerHTML = `
+                    <div class="modal-character">
+                        <h2>${character.name}</h2>
+                        <img src="${character.image}" alt="${character.name}" class="modal-character-image">
+                        <div class="modal-character-details">
+                            <p><strong>Especie:</strong> ${getSpeciesName(character.species)}</p>
+                            <p><strong>Edad:</strong> ${character.age} años</p>
+                            ${character.code ? `<p><strong>Código:</strong> ${character.code}</p>` : ''}
+                            <p><strong>Historia:</strong> ${character.description}</p>
+                            <div class="modal-powers">
+                                <h3>Poderes Especiales</h3>
+                                ${character.powers.map(power => `
+                                    <div class="modal-power">
+                                        <h4>${power.name}</h4>
+                                        <p>${power.description}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="modal-curse">
+                                <h3>Maldición</h3>
+                                <p>${character.curse}</p>
+                            </div>
+                            <p><strong>Familia:</strong> ${character.parents}</p>
+                        </div>
+                    </div>
+                `;
+
+                modal.style.display = 'flex';
+            }
+
+            // Cerrar modal
+            document.getElementById('modal-close').addEventListener('click', function() {
+                document.getElementById('character-modal').style.display = 'none';
+            });
+
+            // Cerrar modal al hacer clic fuera
+            document.getElementById('character-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+
+            // Renderizar personajes iniciales
+            renderCharacters(filteredCharacters, currentPage);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunidad de fans de Por Amor - Comparte tu opinión, califica la serie y conecta con otros fans">
+    <meta name="keywords" content="comentarios por amor, comunidad fans, opiniones serie, calificaciones">
+    <meta name="author" content="Por Amor Series">
+    <meta property="og:title" content="Comunidad Por Amor - Opiniones y Comentarios">
+    <meta property="og:description" content="Únete a la comunidad de Por Amor y comparte tu pasión por la serie">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Comunidad | Por Amor - Serie Fantástica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="comentarios.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 1024 1024" class="logo-svg">
+                    <path d="M512.61 766.47c-191.73 0-382.35 23.79-446.14-114.4-21.3-46.15 156.87 53.84 302.12 65.37C269.82 673.22 142.26 612.89 111 502.09 97.46 454 325 655.19 382.14 669.37c-42.61-38.46-223.06-198.32-168.49-294.18 25.18-44.22 184 242.27 184 242.27s-134.75-248.84-58.1-324.95c31-30.76 67.78 276.88 141.38 344.17 0 0-35.83-382.63 30-380.71s51.32 244.19 32 384.55C630 519.4 645.53 315.59 672.64 288.67s69.72 153.82-63.91 332.64c77.47-13.46 197.54-299.95 203.35-251.88 19 155.67-86.61 229.3-86.61 229.3s175.74-67.84 186.11 19.23c6.47 54.31-207.88 177-207.88 177s236.58 74.27 179.29 147.78-172.37-98.59-172.37-98.59 32.38 249.22-98.71 193.42c-65.54-27.88 16.53-198.34 16.53-198.34s-154.71 242.63-228.73 153.37c-37.85-45.67 115.88-204.16 115.88-204.16z" fill="url(#logoGradient)"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ae4db"/>
+                            <stop offset="100%" style="stop-color:#667eea"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Por Amor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                <li><a href="personajes.html" class="nav-link">👥 Personajes</a></li>
+                <li><a href="universo.html" class="nav-link">🌟 Universo</a></li>
+                <li><a href="galeria.html" class="nav-link">🖼️ Galería</a></li>
+                <li><a href="tienda.html" class="nav-link">🛒 Tienda</a></li>
+                <li><a href="comentarios.html" class="nav-link active">💬 Comunidad</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de partículas -->
+    <div class="particles-bg"></div>
+
+    <!-- Header de comunidad -->
+    <header class="community-hero">
+        <div class="container">
+            <h1 class="page-title">Comunidad de Fans</h1>
+            <p class="page-subtitle">Comparte tu pasión por Por Amor con fans de todo el mundo</p>
+        </div>
+    </header>
+
+    <!-- Estadísticas de la comunidad -->
+    <section class="community-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="total-comments">0</h3>
+                    <p>Comentarios</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="average-rating">0.0</h3>
+                    <p>Calificación Promedio</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="active-fans">0</h3>
+                    <p>Fans Activos</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="favorite-character">-</h3>
+                    <p>Personaje Favorito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de nueva reseña -->
+    <section class="review-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title">Comparte tu Opinión</h2>
+                <form id="review-form" class="review-form" novalidate>
+                    <div class="form-header">
+                        <div class="form-group">
+                            <label for="reviewer-name">Tu Nombre *</label>
+                            <input type="text" id="reviewer-name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewer-email">Email (opcional)</label>
+                            <input type="email" id="reviewer-email" name="email">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="rating-section">
+                        <label class="rating-label">Tu Calificación *</label>
+                        <div class="star-rating" id="star-rating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <span class="rating-text" id="rating-text">Selecciona una calificación</span>
+                        <span class="error-message" id="rating-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-title">Título de tu Reseña *</label>
+                        <input type="text" id="review-title" name="title" placeholder="Ej: Una historia que me emocionó profundamente" required>
+                        <span class="error-message" id="title-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-content">Tu Opinión *</label>
+                        <textarea id="review-content" name="content" rows="6" placeholder="Comparte tu experiencia con Por Amor, qué te gustó más, tu personaje favorito..." required></textarea>
+                        <div class="character-count">
+                            <span id="char-count">0</span>/500 caracteres
+                        </div>
+                        <span class="error-message" id="content-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="favorite-character">Personaje Favorito</label>
+                        <select id="favorite-character" name="favoriteCharacter">
+                            <option value="">Selecciona tu personaje favorito</option>
+                            <option value="dahlia">Dahlia Coldwell Cythe</option>
+                            <option value="elaine">Elaine Namikaze Mirae</option>
+                            <option value="evelyn">Evelyn Daurella Mouton</option>
+                            <option value="cielo">Cielo Sounssera Mirae</option>
+                            <option value="liam">Liam Evans Solace</option>
+                            <option value="arya">Arya Coldwell Cythe</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="spoiler-warning" name="spoilerWarning">
+                            <span class="checkmark"></span>
+                            Mi reseña contiene spoilers
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <span class="checkmark"></span>
+                            Recomendaría esta serie a otros
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit" id="submit-review">
+                        <span class="btn-text">Publicar Reseña</span>
+                        <span class="btn-loading" style="display: none;">Publicando...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros y ordenamiento -->
+    <section class="reviews-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="filter-controls">
+                    <div class="filter-buttons" id="rating-filters">
+                        <button class="filter-btn active" data-filter="all">Todas las Reseñas</button>
+                        <button class="filter-btn" data-filter="5">⭐⭐⭐⭐⭐ (5)</button>
+                        <button class="filter-btn" data-filter="4">⭐⭐⭐⭐ (4+)</button>
+                        <button class="filter-btn" data-filter="3">⭐⭐⭐ (3+)</button>
+                        <button class="filter-btn" data-filter="spoilers">🚨 Con Spoilers</button>
+                    </div>
+                </div>
+                
+                <div class="sort-controls">
+                    <select id="sort-reviews" class="sort-select">
+                        <option value="newest">Más Recientes</option>
+                        <option value="oldest">Más Antiguas</option>
+                        <option value="highest">Mejor Calificadas</option>
+                        <option value="lowest">Menor Calificadas</option>
+                        <option value="helpful">Más Útiles</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="review-search" placeholder="Buscar en las reseñas..." class="search-input">
+                <button class="search-btn" id="review-search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de reseñas -->
+    <main class="reviews-section">
+        <div class="container">
+            <div class="reviews-header">
+                <h2 class="section-title">Reseñas de la Comunidad</h2>
+                <div class="reviews-count" id="reviews-count">
+                    <span id="showing-count">0</span> reseñas encontradas
+                </div>
+            </div>
+            
+            <div class="reviews-list" id="reviews-list">
+                <!-- Las reseñas se cargarán dinámicamente -->
+            </div>
+            
+            <div class="load-more-container" id="load-more-container">
+                <button class="btn-secondary" id="load-more-btn">Cargar Más Reseñas</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de confirmación -->
+    <div class="confirmation-modal" id="confirmation-modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3>¡Reseña Publicada!</h3>
+            <p>Gracias por compartir tu opinión con la comunidad de Por Amor.</p>
+            <button class="btn-primary" id="modal-close">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Por Amor</h4>
+                    <p>Una serie que celebra la diversidad y el poder del amor verdadero.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="universo.html">Universo</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="#" id="guidelines-link">Normas de la Comunidad</a></li>
+                        <li><a href="#" id="report-link">Reportar Contenido</a></li>
+                        <li><a href="#" id="newsletter-link">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: comunidad@poramor.com</p>
+                    <p>© 2025 Por Amor. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/rating.js"></script>
+    <script src="js/comentarios.js"></script>
+</body>
+</html>

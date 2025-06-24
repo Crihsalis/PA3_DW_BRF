@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el universo de Por Amor - Razas, especies, territorios y la magia que conecta todos los mundos">
+    <meta name="keywords" content="universo por amor, razas fantásticas, ángeles, demonios, vampiros, licántropos, magia">
+    <meta name="author" content="Por Amor Series">
+    <meta property="og:title" content="Universo de Por Amor - Mundos y Especies">
+    <meta property="og:description" content="Descubre los territorios mágicos y las especies que habitan el universo de Por Amor">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Universo | Por Amor - Serie Fantástica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="universo.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 1024 1024" class="logo-svg">
+                    <path d="M512.61 766.47c-191.73 0-382.35 23.79-446.14-114.4-21.3-46.15 156.87 53.84 302.12 65.37C269.82 673.22 142.26 612.89 111 502.09 97.46 454 325 655.19 382.14 669.37c-42.61-38.46-223.06-198.32-168.49-294.18 25.18-44.22 184 242.27 184 242.27s-134.75-248.84-58.1-324.95c31-30.76 67.78 276.88 141.38 344.17 0 0-35.83-382.63 30-380.71s51.32 244.19 32 384.55C630 519.4 645.53 315.59 672.64 288.67s69.72 153.82-63.91 332.64c77.47-13.46 197.54-299.95 203.35-251.88 19 155.67-86.61 229.3-86.61 229.3s175.74-67.84 186.11 19.23c6.47 54.31-207.88 177-207.88 177s236.58 74.27 179.29 147.78-172.37-98.59-172.37-98.59 32.38 249.22-98.71 193.42c-65.54-27.88 16.53-198.34 16.53-198.34s-154.71 242.63-228.73 153.37c-37.85-45.67 115.88-204.16 115.88-204.16z" fill="url(#logoGradient)"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ae4db"/>
+                            <stop offset="100%" style="stop-color:#667eea"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Por Amor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                <li><a href="personajes.html" class="nav-link">👥 Personajes</a></li>
+                <li><a href="universo.html" class="nav-link active">🌟 Universo</a></li>
+                <li><a href="galeria.html" class="nav-link">🖼️ Galería</a></li>
+                <li><a href="tienda.html" class="nav-link">🛒 Tienda</a></li>
+                <li><a href="comentarios.html" class="nav-link">💬 Comunidad</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de partículas -->
+    <div class="particles-bg"></div>
+
+    <!-- Header del universo -->
+    <header class="universe-hero">
+        <div class="container">
+            <h1 class="page-title">El Universo de Por Amor</h1>
+            <p class="page-subtitle">Descubre los mundos donde el amor trasciende todas las barreras</p>
+            
+            <!-- SVG personalizado del universo -->
+            <div class="universe-visual">
+                <svg class="universe-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" id="universe-map">
+                    <defs>
+                        <radialGradient id="celestialGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.3" />
+                        </radialGradient>
+                        <radialGradient id="demonGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#e94560;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f093fb;stop-opacity:0.3" />
+                        </radialGradient>
+                        <radialGradient id="neutralGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#0ae4db;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#4facfe;stop-opacity:0.3" />
+                        </radialGradient>
+                    </defs>
+                    
+                    <!-- Reino Celestial -->
+                    <circle cx="200" cy="120" r="80" fill="url(#celestialGrad)" class="realm-circle celestial" data-realm="celestial">
+                        <animate attributeName="r" values="80;85;80" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="200" y="125" text-anchor="middle" fill="white" font-size="16" font-weight="bold" pointer-events="none">Reino Celestial</text>
+                    
+                    <!-- Dimensión Demoníaca -->
+                    <circle cx="600" cy="120" r="80" fill="url(#demonGrad)" class="realm-circle demonic" data-realm="demonic">
+                        <animate attributeName="r" values="80;85;80" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="600" y="125" text-anchor="middle" fill="white" font-size="16" font-weight="bold" pointer-events="none">Dimensión Oscura</text>
+                    
+                    <!-- Mundo Neutral -->
+                    <circle cx="400" cy="280" r="90" fill="url(#neutralGrad)" class="realm-circle neutral" data-realm="neutral">
+                        <animate attributeName="r" values="90;95;90" dur="5s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="400" y="285" text-anchor="middle" fill="white" font-size="16" font-weight="bold" pointer-events="none">Mundo Neutral</text>
+                    
+                    <!-- Conexiones -->
+                    <path d="M 280 120 Q 400 50 520 120" stroke="#0ae4db" stroke-width="3" fill="none" opacity="0.6" class="realm-connection">
+                        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 200 200 Q 300 240 400 200" stroke="#667eea" stroke-width="3" fill="none" opacity="0.6" class="realm-connection">
+                        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 520 200 Q 460 240 400 200" stroke="#e94560" stroke-width="3" fill="none" opacity="0.6" class="realm-connection">
+                        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite"/>
+                    </path>
+                    
+                    <!-- Estrellas decorativas -->
+                    <g class="stars">
+                        <circle cx="100" cy="60" r="2" fill="white" opacity="0.8">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="700" cy="80" r="2" fill="white" opacity="0.8">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="150" cy="350" r="2" fill="white" opacity="0.8">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="650" cy="320" r="2" fill="white" opacity="0.8">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+                </svg>
+                
+                <!-- Panel de información del reino -->
+                <div class="realm-info" id="realm-info" style="display: none;">
+                    <h3 id="realm-title">Reino</h3>
+                    <p id="realm-description">Descripción del reino seleccionado</p>
+                    <div class="realm-inhabitants" id="realm-inhabitants"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="universe-content">
+        <!-- Selector de vista del universo -->
+        <section class="universe-controls">
+            <div class="container">
+                <div class="view-selector" id="view-selector">
+                    <button class="view-btn active" data-view="species">Especies</button>
+                    <button class="view-btn" data-view="powers">Poderes</button>
+                    <button class="view-btn" data-view="territories">Territorios</button>
+                    <button class="view-btn" data-view="timeline">Cronología</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de especies -->
+        <section class="species-section view-section active" id="species-view">
+            <div class="container">
+                <h2 class="section-title">Razas y Especies</h2>
+                <div class="species-grid" id="species-grid">
+                    <!-- Las especies se cargarán dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de poderes -->
+        <section class="powers-section view-section" id="powers-view">
+            <div class="container">
+                <h2 class="section-title">Sistema de Poderes</h2>
+                <div class="powers-explanation">
+                    <p>En el universo de Por Amor, cada especie posee habilidades únicas que definen su rol en el ecosistema mágico. Los poderes no solo determinan las capacidades de combate, sino también las interacciones sociales y emocionales entre las diferentes razas.</p>
+                </div>
+                <div class="table-container">
+                    <table class="powers-table" id="powers-table">
+                        <thead>
+                            <tr>
+                                <th>Especie</th>
+                                <th>Poder Principal</th>
+                                <th>Habilidades Secundarias</th>
+                                <th>Limitaciones</th>
+                                <th>Origen</th>
+                            </tr>
+                        </thead>
+                        <tbody id="powers-tbody">
+                            <!-- Los poderes se cargarán dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de territorios -->
+        <section class="territories-section view-section" id="territories-view">
+            <div class="container">
+                <h2 class="section-title">Territorios y Dimensiones</h2>
+                <div class="territory-map">
+                    <figure>
+                        <svg class="full-map" viewBox="0 0 1000 600" id="full-territory-map">
+                            <!-- Mapa detallado de territorios -->
+                            <rect width="1000" height="600" fill="url(#mapBackground)"/>
+                            <defs>
+                                <linearGradient id="mapBackground" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e1921"/>
+                                    <stop offset="50%" style="stop-color:#2b222f"/>
+                                    <stop offset="100%" style="stop-color:#26476f"/>
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Territorios principales -->
+                            <polygon points="100,100 300,50 400,150 250,250" fill="url(#celestialGrad)" class="territory-zone" data-territory="celestial" opacity="0.8"/>
+                            <polygon points="600,50 900,100 850,250 550,200" fill="url(#demonGrad)" class="territory-zone" data-territory="demonic" opacity="0.8"/>
+                            <polygon points="50,300 200,400 100,550 50,450" fill="#ff6b6b" class="territory-zone" data-territory="vampire" opacity="0.8"/>
+                            <polygon points="800,350 950,400 900,550 750,500" fill="#0ae4db" class="territory-zone" data-territory="lycan" opacity="0.8"/>
+                            <circle cx="500" cy="350" r="100" fill="url(#neutralGrad)" class="territory-zone" data-territory="neutral" opacity="0.8"/>
+                            
+                            <!-- Etiquetas de territorios -->
+                            <text x="250" y="150" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Reino Celestial</text>
+                            <text x="750" y="150" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Dimensión Oscura</text>
+                            <text x="125" y="400" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Reino Nocturno</text>
+                            <text x="850" y="450" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Bosques Salvajes</text>
+                            <text x="500" y="355" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Mundo Neutral</text>
+                        </svg>
+                        <figcaption>Mapa de los territorios de Por Amor</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="territory-descriptions" id="territory-descriptions">
+                    <!-- Descripciones de territorios se cargarán dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de cronología -->
+        <section class="timeline-section view-section" id="timeline-view">
+            <div class="container">
+                <h2 class="section-title">Cronología del Universo</h2> <!-- es muy general, proximamente mas detalles-->
+                <div class="timeline" id="timeline">
+                    <!-- La cronología cargar dinámicamente -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Por Amor</h4>
+                    <p>Una serie que celebra la diversidad y el poder del amor verdadero.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="comentarios.html">Comentarios</a></li>
+                        <li><a href="#" id="newsletter-link">Newsletter</a></li>
+                        <li><a href="#" id="fan-art-link">Fan Art</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: bmmj040@gmail.com</p>
+                    <p>© 2025 Por Amor. Todos los derechos reservados. Esta serie aun esta en proceso.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script>
+        // Datos del universo
+        const universeData = {
+            species: [
+                {
+                    id: 'angels',
+                    name: 'Ángeles',
+                    icon: '🪶',
+                    description: 'Seres celestiales con diferentes especializaciones según su linaje. Poseen una conexión inherente con la luz y las energías divinas.',
+                    subspecies: [
+                        { name: 'Lumerian', description: 'Ángeles especializados en la luz y la memoria. Pueden acceder a conocimientos ancestrales y manipular recuerdos.' },
+                        { name: 'Yurellim', description: 'Ángeles con habilidades de control mental y telepatía. Maestros en la manipulación de la voluntad.' }
+                    ],
+                    image: 'img/angel.jpg'
+                },
+                {
+                    id: 'demons',
+                    name: 'Demonios',
+                    icon: '🔥',
+                    description: 'Entidades oscuras con poderes relacionados al castigo y la justicia. No son inherentemente malvados, sino ejecutores del equilibrio cósmico.',
+                    subspecies: [
+                        { name: 'Baerum', description: 'Demonios especializados en contratos y pactos mágicos. Pueden crear vínculos inquebrantables con consecuencias místicas.' }
+                    ],
+                    image: 'img/demon.jpg'
+                },
+                {
+                    id: 'vampires',
+                    name: 'Vampiros',
+                    icon: '🩸',
+                    description: 'Criaturas nocturnas con habilidades de manipulación vital. Pueden drenar y transferir energía vital, así como curar heridas mortales.',
+                    subspecies: [
+                        { name: 'vemp', description: 'Vampiros con habilidades de manipulación de la oscuridad y la sombra. Pueden volverse invisibles en la penumbra.' },
+                    ],
+                    image: 'img/vampiro.jpg'
+                },
+                {
+                    id: 'lycans',
+                    name: 'Licántropos',
+                    icon: '🐺',
+                    description: 'Shapeshifters con conexión animal profunda. Su transformación va más allá de lo físico, incluyendo instintos y habilidades sobrenaturales.',
+                    subspecies: [
+                        { name: 'Lobos', description: 'Los más comunes, con habilidades de caza en manada y fuerza sobrenatural.' },
+                        { name: 'Zorros Nayrashi', description: 'Licántropos con habilidades de ilusión y sigilo mejoradas.' }
+                    ],
+                    image: 'img/licantropo.jpg'
+                },
+                {
+                    id: 'hada',
+                    name: 'Hadas',
+                    icon: '🧚',
+                    description: 'Seres mágicos con poderes de encantamiento y manipulación de energías. Aunque pequeñas en estatura, su magia es inmensamente poderosa.',
+                    subspecies: [
+                        { name: 'Hada de Luz', description: 'Especializadas en curación y protección, pueden crear barreras mágicas.' },
+                        { name: 'Hada Oscura', description: 'Maestras del engaño y la ilusión, pueden manipular la percepción de la realidad.' }
+                    ],
+                    image: 'img/hada.jpg'
+                },
+                {
+                    id: 'druidas',
+                    name: 'Druida',
+                    icon: '🌿',
+                    description: 'Humanos con conexión mágica especial a la naturaleza. Pueden manipular elementos naturales y tienen una comprensión profunda de los ciclos de vida y muerte. Sus poderes vienen con maldiciones naturales que mantienen el equilibrio entre dar y recibir',
+                    subspecies: [
+                        { name: 'Daroide', description: 'Especializados en manipulación de plantas y rocas, pueden hacer crecer la vegetación a voluntad.' },                    ],
+                    image: 'img/druida.jpg'
+                },
+                {
+                    id : 'Hybrids',
+                    name: 'Hibridos',
+                    icon: '???',
+                    description: 'Seres que combinan las habilidades de dos o más especies. Suelen ser inestables debido a su maldicion.',
+                    subspecies: [ {error: '⚠️', 
+                    description: 'Los híbridos son el resultado de uniones entre diferentes especies, lo que les otorga una mezcla única de habilidades y debilidades. Sin embargo, su naturaleza híbrida puede llevar a inestabilidad emocional y física.'}
+                    ],
+                    image: 'img/hibrido.jpg'
+                },
+            ],
+            
+            powers: [
+                { species: 'Ángeles', primary: 'Manipulación de Luz', secondary: 'Memoria, Telepatía', limitations: 'Debilidad en oscuridad', origin: 'Reino Celestial' },
+                { species: 'Demonios', primary: 'Contratos Mágicos', secondary: 'Castigo, Justicia', limitations: 'Vínculos restrictivos', origin: 'Dimensión Oscura' },
+                { species: 'Vampiros', primary: 'Manipulación Vital', secondary: 'Velocidad, Curación', limitations: 'Luz solar, sed', origin: 'Reino Nocturno' },
+                { species: 'Licántropos', primary: 'Transformación', secondary: 'Fuerza, Instintos', limitations: 'Control emocional', origin: 'Bosques Salvajes' },
+                { species: 'Híbridos', primary: 'Poderes Combinados', secondary: 'Adaptabilidad', limitations: 'Inestabilidad', origin: 'Mundo Neutral' },
+                { species: 'Hadas', primary: 'Encantamiento', secondary: 'Manipulación de Energías', limitations: 'Vulnerabilidad a hierro', origin: 'Reino de las Hadas' },
+                { species: 'Druida', primary: 'Conexión con la Naturaleza', secondary: 'Manipulación de Elementos', limitations: 'Dependencia del entorno natural', origin: 'Bosques Sagrados' }
+            ],
+            
+            territories: [
+                {
+                    name: 'Reino Celestial',
+                    id: 'celestial',
+                    description: 'Un reino de luz eterna donde residen los ángeles. Las estructuras flotan en el aire y la energía divina impregna cada rincón.',
+                    inhabitants: 'Ángeles Lumerian y Yurellim',
+                    characteristics: 'Gravedad reducida, luz constante, energía curativa'
+                },
+                {
+                    name: 'Dimensión Oscura',
+                    id: 'demonic',
+                    description: 'No es un lugar de maldad, sino de justicia absoluta. Aquí los demonios mantienen el equilibrio cósmico.',
+                    inhabitants: 'Demonios Baerum y otras castas',
+                    characteristics: 'Realidad maleable, contratos visibles, justicia automática'
+                },
+                {
+                    name: 'Reino Nocturno',
+                    id: 'vampire',
+                    description: 'Un territorio de noche perpetua donde los vampiros han creado una sociedad sofisticada.',
+                    inhabitants: 'Vampiros de diferentes linajes',
+                    characteristics: 'Noche eterna, arquitectura gótica, energía vital concentrada'
+                },
+                {
+                    name: 'Bosques Salvajes',
+                    id: 'lycan',
+                    description: 'Vastos bosques donde la naturaleza salvaje reina suprema y los licántropos viven en armonía con el entorno.',
+                    inhabitants: 'Licántropos lobos y zorros',
+                    characteristics: 'Naturaleza intacta, instintos potenciados, conexión animal'
+                },
+                {
+                    name: 'Mundo Neutral',
+                    id: 'neutral',
+                    description: 'El punto de encuentro entre todas las dimensiones, donde las diferentes especies pueden coexistir.',
+                    inhabitants: 'Todas las especies, híbridos',
+                    characteristics: 'Magia estable, todas las razas, centro de comercio'
+                }
+            ],
+            
+            timeline: [
+                { year: 'Era Primordial', event: 'Creación de las Dimensiones', description: 'Los reinos celestial y demoníaco se separan, creando el equilibrio fundamental.' },
+                { year: 'Era Antigua', event: 'Aparición de Vampiros y Licántropos', description: 'Las primeras criaturas nocturnas y shapeshifters emergen del mundo neutral.' },
+                { year: 'Era de los Híbridos', event: 'Primeros Cruces entre Especies', description: 'El amor trasciende las barreras raciales, dando origen a los primeros híbridos.' },
+                { year: 'Era Moderna', event: 'La Historia de Por Amor', description: 'Los eventos actuales de la serie, donde cinco jóvenes cambiarán el destino de todos los mundos.' }
+            ]
+        };
+
+        // Información de los reinos
+        const realmData = {
+            celestial: {
+                title: 'Reino Celestial',
+                description: 'Un reino de luz eterna donde residen los ángeles. Las estructuras flotan en el aire y la energía divina impregna cada rincón.',
+                inhabitants: 'Ángeles Lumerian y Yurellim, seres de luz pura'
+            },
+            demonic: {
+                title: 'Dimensión Oscura',
+                description: 'No es un lugar de maldad, sino de justicia absoluta. Aquí los demonios mantienen el equilibrio cósmico.',
+                inhabitants: 'Demonios Baerum y otras castas de justicieros'
+            },
+            neutral: {
+                title: 'Mundo Neutral',
+                description: 'El punto de encuentro entre todas las dimensiones, donde las diferentes especies pueden coexistir en armonía.',
+                inhabitants: 'Todas las especies, híbridos y seres en transición'
+            }
+        };
+
+        // Inicializar página del universo
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeUniversePage();
+        });
+
+        function initializeUniversePage() {
+            // Inicializar vista por defecto
+            showView('species');
+            
+            // Event listeners para el mapa del universo
+            const realmCircles = document.querySelectorAll('.realm-circle');
+            realmCircles.forEach(circle => {
+                circle.addEventListener('click', function() {
+                    const realm = this.getAttribute('data-realm');
+                    showRealmInfo(realm);
+                });
+                
+                circle.addEventListener('mouseenter', function() {
+                    this.style.filter = 'brightness(1.3)';
+                });
+                
+                circle.addEventListener('mouseleave', function() {
+                    this.style.filter = 'brightness(1)';
+                });
+            });
+
+            // Event listeners para el selector de vista
+            const viewButtons = document.querySelectorAll('.view-btn');
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const view = this.getAttribute('data-view');
+                    
+                    // Actualizar botones activos
+                    viewButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Mostrar vista
+                    showView(view);
+                });
+            });
+
+            // Event listeners para territorios en el mapa completo
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('territory-zone')) {
+                    const territory = e.target.getAttribute('data-territory');
+                    showTerritoryDetails(territory);
+                }
+            });
+        }
+
+        function showRealmInfo(realm) {
+            const realmInfo = document.getElementById('realm-info');
+            const data = realmData[realm];
+            
+            if (data) {
+                document.getElementById('realm-title').textContent = data.title;
+                document.getElementById('realm-description').textContent = data.description;
+                document.getElementById('realm-inhabitants').innerHTML = `<strong>Habitantes:</strong> ${data.inhabitants}`;
+                
+                realmInfo.style.display = 'block';
+                
+                // Ocultar después de 5 segundos
+                setTimeout(() => {
+                    realmInfo.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        function showView(viewName) {
+            // Ocultar todas las vistas
+            const sections = document.querySelectorAll('.view-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Mostrar vista seleccionada
+            const targetSection = document.getElementById(`${viewName}-view`);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                
+                // Cargar contenido específico
+                switch(viewName) {
+                    case 'species':
+                        loadSpecies();
+                        break;
+                    case 'powers':
+                        loadPowers();
+                        break;
+                    case 'territories':
+                        loadTerritories();
+                        break;
+                    case 'timeline':
+                        loadTimeline();
+                        break;
+                }
+            }
+        }
+
+        function loadSpecies() {
+            const container = document.getElementById('species-grid');
+            container.innerHTML = '';
+            
+            universeData.species.forEach(species => {
+                const speciesCard = document.createElement('article');
+                speciesCard.className = 'species-card';
+                speciesCard.setAttribute('data-species', species.id);
+                
+                speciesCard.innerHTML = `
+                    <div class="species-header">
+                        <div class="species-icon">${species.icon}</div>
+                        <h3>${species.name}</h3>
+                    </div>
+                    <div class="species-image">
+                        <img src="${species.image}" alt="${species.name}" class="species-img" loading="lazy">
+                    </div>
+                    <div class="species-description">
+                        <p>${species.description}</p>
+                        ${species.subspecies.length > 0 ? `
+                            <div class="subspecies">
+                                <h4>Derivaciones:</h4>
+                                ${species.subspecies.map(sub => `
+                                    <div class="subspecies-item">
+                                        <h5>${sub.name}</h5>
+                                        <p>${sub.description}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                
+                container.appendChild(speciesCard);
+            });
+        }
+
+        function loadPowers() {
+            const tbody = document.getElementById('powers-tbody');
+            tbody.innerHTML = '';
+            
+            universeData.powers.forEach((power, index) => {
+                const row = document.createElement('tr');
+                row.className = getRowClass(power.species);
+                row.innerHTML = `
+                    <td>${power.species}</td>
+                    <td>${power.primary}</td>
+                    <td>${power.secondary}</td>
+                    <td>${power.limitations}</td>
+                    <td>${power.origin}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function loadTerritories() {
+            const container = document.getElementById('territory-descriptions');
+            container.innerHTML = '';
+            
+            universeData.territories.forEach(territory => {
+                const territoryCard = document.createElement('div');
+                territoryCard.className = 'territory-card';
+                territoryCard.innerHTML = `
+                    <h3>${territory.name}</h3>
+                    <p>${territory.description}</p>
+                    <p><strong>Habitantes:</strong> ${territory.inhabitants}</p>
+                    <p><strong>Características:</strong> ${territory.characteristics}</p>
+                `;
+                container.appendChild(territoryCard);
+            });
+        }
+
+        function loadTimeline() {
+            const container = document.getElementById('timeline');
+            container.innerHTML = '';
+            
+            universeData.timeline.forEach((event, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item';
+                timelineItem.innerHTML = `
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>${event.year}</h3>
+                        <h4>${event.event}</h4>
+                        <p>${event.description}</p>
+                    </div>
+                `;
+                container.appendChild(timelineItem);
+            });
+        }
+
+        function getRowClass(species) {
+            const classMap = {
+                'Ángeles': 'angel-row',
+                'Demonios': 'demon-row',
+                'Vampiros': 'vampire-row',
+                'Licántropos': 'lycan-row',
+                'Híbridos': 'hybrid-row'
+            };
+            return classMap[species] || '';
+        }
+
+        function showTerritoryDetails(territoryId) {
+            const territory = universeData.territories.find(t => t.id === territoryId);
+            if (territory) {
+                alert(`${territory.name}\n\n${territory.description}\n\nHabitantes: ${territory.inhabitants}`);
+            }
+        }
+    </script>
+</body>
+</html>

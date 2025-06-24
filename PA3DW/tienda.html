@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda oficial de Por Amor - Merchandising, libros, coleccionables y productos exclusivos">
+    <meta name="keywords" content="tienda por amor, merchandising, productos oficiales, coleccionables">
+    <meta name="author" content="Por Amor Series">
+    <meta property="og:title" content="Tienda Por Amor - Productos Oficiales">
+    <meta property="og:description" content="Consigue productos exclusivos y merchandising oficial de Por Amor">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Tienda | Por Amor - Serie Fantástica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 1024 1024" class="logo-svg">
+                    <path d="M512.61 766.47c-191.73 0-382.35 23.79-446.14-114.4-21.3-46.15 156.87 53.84 302.12 65.37C269.82 673.22 142.26 612.89 111 502.09 97.46 454 325 655.19 382.14 669.37c-42.61-38.46-223.06-198.32-168.49-294.18 25.18-44.22 184 242.27 184 242.27s-134.75-248.84-58.1-324.95c31-30.76 67.78 276.88 141.38 344.17 0 0-35.83-382.63 30-380.71s51.32 244.19 32 384.55C630 519.4 645.53 315.59 672.64 288.67s69.72 153.82-63.91 332.64c77.47-13.46 197.54-299.95 203.35-251.88 19 155.67-86.61 229.3-86.61 229.3s175.74-67.84 186.11 19.23c6.47 54.31-207.88 177-207.88 177s236.58 74.27 179.29 147.78-172.37-98.59-172.37-98.59 32.38 249.22-98.71 193.42c-65.54-27.88 16.53-198.34 16.53-198.34s-154.71 242.63-228.73 153.37c-37.85-45.67 115.88-204.16 115.88-204.16z" fill="url(#logoGradient)"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ae4db"/>
+                            <stop offset="100%" style="stop-color:#667eea"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Por Amor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                <li><a href="personajes.html" class="nav-link">👥 Personajes</a></li>
+                <li><a href="universo.html" class="nav-link">🌟 Universo</a></li>
+                <li><a href="galeria.html" class="nav-link">🖼️ Galería</a></li>
+                <li><a href="tienda.html" class="nav-link active">🛒 Tienda</a></li>
+                <li><a href="comentarios.html" class="nav-link">💬 Comunidad</a></li>
+            </ul>
+            <div class="cart-icon" id="cart-icon">
+                <span class="cart-count" id="cart-count">0</span>
+                🛒
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de partículas -->
+    <div class="particles-bg"></div>
+
+    <!-- Header de tienda -->
+    <header class="shop-hero">
+        <div class="container">
+            <h1 class="page-title">Tienda Oficial</h1>
+            <p class="page-subtitle">Descubre productos exclusivos del universo de Por Amor</p>
+        </div>
+    </header>
+
+    <!-- Filtros y categorías -->
+    <section class="shop-filters">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="category-filters" id="category-filters">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="clothing">Ropa</button>
+                    <button class="filter-btn" data-category="accessories">Accesorios</button>
+                    <button class="filter-btn" data-category="books">Libros</button>
+                    <button class="filter-btn" data-category="collectibles">Coleccionables</button>
+                    <button class="filter-btn" data-category="digital">Digital</button>
+                </div>
+                <div class="sort-controls">
+                    <select id="sort-select" class="sort-select">
+                        <option value="name">Nombre A-Z</option>
+                        <option value="price-low">Precio menor</option>
+                        <option value="price-high">Precio mayor</option>
+                        <option value="rating">Más valorados</option>
+                        <option value="newest">Más recientes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="product-search" placeholder="Buscar productos..." class="search-input">
+                <button class="search-btn" id="product-search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="featured-grid" id="featured-grid">
+                <!-- Productos destacados se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo principal -->
+    <main class="shop-catalog">
+        <div class="container">
+            <div class="catalog-header">
+                <h2 class="section-title">Catálogo Completo</h2>
+                <div class="results-info" id="results-info">
+                    <span id="product-count">0 productos</span>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Los productos se cargarán dinámicamente -->
+            </div>
+            
+            <!-- Paginación -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn" id="prev-page" disabled>← Anterior</button>
+                <div class="page-numbers" id="page-numbers"></div>
+                <button class="page-btn" id="next-page">Siguiente →</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrito de compras -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="cart-close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart-content" id="cart-content">
+            <div class="cart-empty" id="cart-empty">
+                <p>Tu carrito está vacío</p>
+                <button class="btn-secondary" id="continue-shopping">Continuar Comprando</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Items del carrito se cargarán dinámicamente -->
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <span class="total-label">Total:</span>
+                <span class="total-amount" id="cart-total">$0.00</span>
+            </div>
+            <button class="btn-primary" id="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Modal de producto -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenido del modal se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de checkout -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="checkout-close">&times;</button>
+            <div class="checkout-content">
+                <h2>Finalizar Compra</h2>
+                <form id="checkout-form" class="checkout-form" novalidate>
+                    <div class="form-section">
+                        <h3>Información de Contacto</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-name">Nombre Completo *</label>
+                                <input type="text" id="checkout-name" name="name" required>
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-email">Email *</label>
+                                <input type="email" id="checkout-email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Dirección de Envío</h3>
+                        <div class="form-group">
+                            <label for="checkout-address">Dirección *</label>
+                            <input type="text" id="checkout-address" name="address" required>
+                            <span class="error-message" id="address-error"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-city">Ciudad *</label>
+                                <input type="text" id="checkout-city" name="city" required>
+                                <span class="error-message" id="city-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-country">País *</label>
+                                <select id="checkout-country" name="country" required>
+                                    <option value="">Selecciona un país</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="BO">Bolivia</option>
+                                    <option value="BR">Brasil</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="EC">Ecuador</option>
+                                    <option value="ES">España</option>
+                                    <option value="GT">Guatemala</option>
+                                    <option value="HN">Honduras</option>
+                                    <option value="MX">México</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="PA">Panamá</option>
+                                    <option value="PE">Perú</option>
+                                    <option value="PY">Paraguay</option>
+                                    <option value="SV">El Salvador</option>
+                                    <option value="UY">Uruguay</option>
+                                    <option value="VE">Venezuela</option>
+                                    <option value="null">otro</option>
+                                </select>
+                                <span class="error-message" id="country-error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Resumen del Pedido</h3>
+                        <div class="order-summary" id="order-summary">
+                            <!-- Resumen se carga dinámicamente -->
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary checkout-submit">
+                        Confirmar Pedido
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Por Amor</h4>
+                    <p>Una serie que celebra la diversidad y el poder del amor verdadero.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="universo.html">Universo</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#" id="faq-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: tienda@poramor.com</p>
+                    <p>© 2025 Por Amor. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/tienda.js"></script>
+</body>
+</html>

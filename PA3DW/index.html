@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Por Amor - Serie fantástica de romance sobrenatural. Descubre un mundo donde diferentes razas coexisten y el amor tiene que ver en muchos aspectos..">
+    <meta name="keywords" content="por amor, serie fantástica, romance sobrenatural, ángeles, demonios, vampiros, licántropos">
+    <meta name="author" content="Por Amor Series">
+    <meta property="og:title" content="Por Amor - Serie Fantástica">
+    <meta property="og:description" content="Sumérgete en un universo donde el amor no conoce fronteras y las distintas formas como se es posible verla.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Por Amor - Serie Fantástica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="80px" height="80px" viewBox="0 0 1024 1024" class="icon"  
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M512.61 766.47c-191.73 0-382.35 23.79-446.14-114.4-21.3-46.15 156.87 53.84 302.12 65.37C269.82 673.22 142.26 612.89 111 502.09 97.46 454 325 655.19 382.14 669.37c-42.61-38.46-223.06-198.32-168.49-294.18 25.18-44.22 184 242.27 184 242.27s-134.75-248.84-58.1-324.95c31-30.76 67.78 276.88 141.38 344.17 0 0-35.83-382.63 30-380.71s51.32 244.19 32 384.55C630 519.4 645.53 315.59 672.64 288.67s69.72 153.82-63.91 332.64c77.47-13.46 197.54-299.95 203.35-251.88 19 157.26-166.55 294.18-166.55 294.18 120.07-38.46 244-188.43 269.19-165.36s-112.33 186.51-292.43 225c211.1-1.92 338.27-127.59 337-84.6-3.78 125.01-254.95 127.82-446.68 127.82z" fill="#EEA7A0" />
+                <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ae4db"/>
+                            <stop offset="100%" style="stop-color:#667eea"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Por Amor</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">🏠 Inicio</a></li>
+                <li><a href="personajes.html" class="nav-link">👥 Personajes</a></li>
+                <li><a href="universo.html" class="nav-link">🌟 Universo</a></li>
+                <li><a href="galeria.html" class="nav-link">🖼️ Galería</a></li>
+                <li><a href="tienda.html" class="nav-link">🛒 Tienda</a></li>
+                <li><a href="comentarios.html" class="nav-link">💬 Comunidad</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de partículas -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <!-- Hero section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Por Amor</h1>
+            <p class="hero-subtitle">Donde las diferencias se vuelven fortalezas y el amor trasciende todas las barreras</p>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main class="main-content">
+        <!-- Sobre la serie -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Bienvenido al Universo de Por Amor</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Sumérgete en un mundo donde ángeles, demonios, vampiros y híbridos conviven en una realidad llena de magia, poderes sobrenaturales y maldiciones que ponen a prueba los corazones más fuertes.</p>
+                        <p>Cada personaje lleva consigo una historia única, poderes extraordinarios y maldiciones que definen su destino. Descubre sus secretos, conoce sus luchas y acompáñalos en esta épica aventura romántica.</p>
+                        
+                        <!-- Elementos multimedia-->
+                        <figure class="multimedia-section">
+                            <video controls width="100%" poster="mp4/borradorSerie.mp4">
+                                <source src="mp4/borradorSerie.mp4" type="video/mp4">
+                                <source src="mp4/borradorSerie.mp4" type="video/webm">
+                                <p>Tu navegador no soporta el elemento video. <a href="img/borradorSerie.mp4">Descarga el trailer</a></p>
+                            </video>
+                            <figcaption>Primer Capitulo Borrador "Por Amor"</figcaption>
+                        </figure>
+                        
+                        <figure class="audio-section">
+                            <audio controls>
+                                <source src="mp3/ghSS.mp3" type="audio/mpeg">
+                                <source src="mp3/ghSS.mp3" type="audio/ogg">
+                                Tu navegador no soporta el elemento audio.
+                            </audio>
+                            <figcaption>🎵 Musica sonora - "version piano"</figcaption>
+                        </figure>
+                    </div>
+                    <figure class="about-image">
+                        <img src="img/univers.jpg" alt="Vista del universo de Por Amor" class="feature-img">
+                        <figcaption>El vasto universo donde se desarrolla nuestra historia</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa interactivo -->
+        <section class="map-section" id="mapa">
+            <div class="container">
+                <h2 class="section-title">Explora los Territorios</h2>
+                <div class="map-container" id="map-container">
+                    <figure>
+                        <svg class="interactive-map" viewBox="0 0 800 500" id="territory-map">
+                            <defs>
+                                <radialGradient id="angelGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.3" />
+                                </radialGradient>
+                                <radialGradient id="demonGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#e94560;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#f093fb;stop-opacity:0.3" />
+                                </radialGradient>
+                                <radialGradient id="vampireGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:0.3" />
+                                </radialGradient>
+                                <radialGradient id="lycGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#0ae4db;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#4facfe;stop-opacity:0.3" />
+                                </radialGradient>
+                            </defs>
+                            
+                            <!-- Territorio Angelical -->
+                            <circle cx="200" cy="150" r="80" fill="url(#angelGrad)" class="territory angel-territory" data-territory="angel">
+                                <title>Reino Celestial</title>
+                            </circle>
+                            <text x="200" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="bold" pointer-events="none">Reino Celestial</text>
+                            
+                            <!-- Territorio Demoniaco -->
+                            <circle cx="600" cy="150" r="80" fill="url(#demonGrad)" class="territory demon-territory" data-territory="demon">
+                                <title>Dimensión Oscura</title>
+                            </circle>
+                            <text x="600" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="bold" pointer-events="none">Dimensión Oscura</text>
+                            
+                            <!-- Territorio Vampiro -->
+                            <circle cx="150" cy="400" r="70" fill="url(#vampireGrad)" class="territory vampire-territory" data-territory="vampire">
+                                <title>Reino Nocturno</title>
+                            </circle>
+                            <text x="150" y="405" text-anchor="middle" fill="white" font-size="12" font-weight="bold" pointer-events="none">Reino Nocturno</text>
+                            
+                            <!-- Territorio Licántropo -->
+                            <circle cx="650" cy="400" r="70" fill="url(#lycGrad)" class="territory lycan-territory" data-territory="lycan">
+                                <title>Bosques Salvajes</title>
+                            </circle>
+                            <text x="650" y="405" text-anchor="middle" fill="white" font-size="12" font-weight="bold" pointer-events="none">Bosques Salvajes</text>
+                            
+                            <!-- Territorio Neutral -->
+                            <circle cx="400" cy="300" r="90" fill="url(#lycGrad)" class="territory neutral-territory" data-territory="neutral">
+                                <title>Mundo Neutral</title>
+                            </circle>
+                            <text x="400" y="305" text-anchor="middle" fill="white" font-size="16" font-weight="bold" pointer-events="none">Mundo Neutral</text>
+                        </svg>
+                        <figcaption>Haz clic en cada territorio para conocer más detalles</figcaption>
+                    </figure>
+                    
+                    <!-- Panel de información del territorio -->
+                    <div class="territory-info" id="territory-info" style="display: none;">
+                        <h3 id="territory-title">Territorio</h3>
+                        <p id="territory-description">Descripción del territorio seleccionado</p>
+                        <div class="territory-stats" id="territory-stats"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personajes destacados -->
+        <section class="featured-characters" id="personajes-destacados">
+            <div class="container">
+                <h2 class="section-title">Personajes Principales</h2>
+                <div class="characters-preview" id="characters-preview">
+                    <!-- Los personajes se cargarán dinámicamente -->
+                </div>
+                <div class="cta-button">
+                    <a href="personajes.html" class="btn-primary">Ver Todos los Personajes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estadísticas de la serie -->
+        <section class="stats-section" id="estadisticas">
+            <div class="container">
+                <h2 class="section-title">Estadísticas del Universo</h2>
+                <div class="table-container">
+                    <table class="stats-table" id="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Cantidad</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stats-tbody">
+                            <!-- Las estadísticas se cargarán dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rating y comentarios recientes -->
+        <section class="community-preview" id="community-preview">
+            <div class="container">
+                <h2 class="section-title">Opiniones de la Comunidad</h2>
+                <div class="rating-summary" id="rating-summary">
+                    <div class="overall-rating">
+                        <div class="rating-display" id="overall-rating-display">
+                            <span class="rating-number">0.0</span>
+                            <div class="stars-display" id="overall-stars"></div>
+                            <span class="rating-count">(0 opiniones)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-comments" id="recent-comments">
+                    <!-- Comentarios recientes se cargarán dinámicamente -->
+                </div>
+                <div class="cta-button">
+                    <a href="comentarios.html" class="btn-primary">Ver Todas las Opiniones</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de suscripción -->
+        <section class="subscription-section" id="suscripcion">
+            <div class="container">
+                <div class="subscription-container">
+                    <form action="https://formsubmit.co/bmmj040@gmail.com" method="POST">
+                        <div class="form-header">
+                            <h3>Únete a Nuestra Comunidad</h3>
+                            <p>Recibe las últimas noticias, avances exclusivos y contenido especial de Por Amor</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <span class="error-message" id="nombre-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="especie-favorita">Especie Favorita</label>
+                            <select id="especie-favorita" name="especie-favorita">
+                                <option value="">Selecciona una especie</option>
+                                <option value="angel">Ángeles</option>
+                                <option value="demonio">Demonios</option>
+                                <option value="vampiro">Vampiros</option>
+                                <option value="licantropo">Licántropos</option>
+                                <option value="hibrido">Híbridos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">¿Qué es lo que más te gusta de Por Amor?</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué te emociona más de la serie..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="acepto-terminos" name="acepto-terminos" required>
+                                <span class="checkmark"></span>
+                                Acepto los <a href="#" id="terminos-link">términos y condiciones</a> *
+                            </label>
+                            <span class="error-message" id="terminos-error"></span>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="acepto-marketing" name="acepto-marketing">
+                                <span class="checkmark"></span>
+                                Quiero recibir ofertas especiales y contenido exclusivo
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" id="btn-submit">
+                            <span class="btn-text">Unirse a la Comunidad</span>
+                            <span class="btn-loading" style="display: none;">Procesando...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Por Amor</h4>
+                    <p>Una serie que explora la diversidad y el poder del amor en sus diferentes contextos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="universo.html">Universo</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="comentarios.html">Comentarios</a></li>
+                        <li><a href="#" id="newsletter-link">Newsletter</a></li>
+                        <li><a href="#" id="fan-art-link">Fan Art</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📧 bmmj040@gmail.com</p>
+                    <p>© 2025 Por Amor. Todos los derechos reservados. Esta serie sigue en proceso.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/rating.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
